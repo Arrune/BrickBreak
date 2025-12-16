@@ -1,3 +1,6 @@
+//Name: Arrune Nimalan
+//Date: 12/16/2025
+//Description: This class controls the paddle which the user uses to hit the ball back up and hit the bricks. It uses several methods to control its movement and appearance.
 package com.BrickBreak;
 
 import java.awt.Graphics;

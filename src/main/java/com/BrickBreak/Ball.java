@@ -1,6 +1,6 @@
 //Name: Arrune Nimalan
 //Date: 12/9/2025
-//Description: 
+//Description: This class represents the ball in the Brick Break game and uses several methods to control its movement and appearance.
 package com.BrickBreak;
 import java.awt.*;
 
