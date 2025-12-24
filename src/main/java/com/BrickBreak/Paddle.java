@@ -1,6 +1,7 @@
 //Name: Arrune Nimalan
 //Date: 12/16/2025
-//Description: This class controls the paddle which the user uses to hit the ball back up and hit the bricks. It uses several methods to control its movement and appearance.
+//Description: This class controls the paddle which the user uses to hit the ball back up and 
+// hit the bricks. It uses several methods to control its movement and appearance.
 package com.BrickBreak;
 
 import java.awt.Graphics;
@@ -17,8 +18,8 @@ public class Paddle {
 	private int x;
 	private int y;
 	private int width;
-	private int height;
 	private int velocity;
+	private int height = 10;
 	//constructor(s):
 	public Paddle (int x, int y, int width, int velocity){
 		this.x = x;
@@ -27,10 +28,14 @@ public class Paddle {
 		this.velocity = velocity;
 	}
 	//methods:
+	//Precondition: Graphics g is not null
+	//Postcondition: The paddle is drawn on the screen
 	public void draw(Graphics g){
 		g.setColor(Color.WHITE);
 		g.fillRect(x, y, width, height);
 	}
+	//Precondition: Paddle is on the screen
+	//Postcondition: Moves the paddle based on its current velocity
 	public void move(){
 		x += velocity;
 	}
@@ -49,16 +54,15 @@ public class Paddle {
 	public int getVelocity(){
 		return velocity;
 	}
-	public int setX(int x){
+	public void setX(int x){
 		this.x = x;
-		return x;
 	}
-	public int setVelocity(int velocity){
+	public void setVelocity(int velocity){
 		this.velocity = velocity;
-		return velocity;
 	}
-	public int addVelocity(int velocity){
+	//Precondition: Paddle is on the screen
+	//Postcondition: Increases the velocity of the paddle based on the given velocity
+	public void addVelocity(int velocity){
 		this.velocity += velocity;
-		return velocity;
 	}
 }

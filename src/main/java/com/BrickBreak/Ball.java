@@ -1,6 +1,7 @@
 //Name: Arrune Nimalan
 //Date: 12/9/2025
-//Description: This class represents the ball in the Brick Break game and uses several methods to control its movement and appearance.
+//Description: This class represents the ball in the Brick Break game and uses several methods 
+// to control its movement and appearance.
 package com.BrickBreak;
 import java.awt.*;
 
@@ -18,19 +19,29 @@ public class Ball {
 		this.x = x;
 		this.y = y;
 		this.radius = radius;
+		changeX = 1;
+		changeY = -2;
 	}
 	//methods:
+	//Preconditon: Graphics g is not null
+	//Postcondition: Draws the ball on the screen
 	public void draw(Graphics g){
 		g.setColor(Color.RED);
 		g.fillOval(x, y, radius, radius);
 	}
+	//Precondition: None
+	//Postcondition: Moves the ball based on its currenty velocity
 	public void move(){
 		x += changeX;
 		y += changeY;
 	}
+	//Precondition: None
+	//Postcondition: Reverses the ball in the x direction
 	public void reverseX(){
 		changeX *= -1;	
 	}
+	//Precondition: None
+	//Postcondition: Reverses the ball in the y direction
 	public void reverseY(){
 		changeY *= -1;
 	}
